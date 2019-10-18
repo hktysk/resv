@@ -6,14 +6,14 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "tsc": "npx tsc --target es5 --lib es6,dom --esModuleInterop --downlevelIteration",
-    "sass": "npx sass --no-source-map"
+    "sass": "npx node-sass --no-source-map assets/css/ --output assets/css/"
   },
   "author": "hktysk",
   "license": "MIT",
   "dependencies": {
+    "node-sass": "^4.12.0",
     "pug": "^2.0.4",
     "reload": "^3.0.2",
-    "sass": "^1.23.0",
     "typescript": "^3.6.4"
   }
 }
