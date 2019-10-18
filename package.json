@@ -11,6 +11,7 @@
   "author": "hktysk",
   "license": "MIT",
   "dependencies": {
+    "pug": "^2.0.4",
     "reload": "^3.0.2",
     "sass": "^1.23.0",
     "typescript": "^3.6.4"
