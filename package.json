@@ -5,11 +5,13 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "tsc": "npx tsc --target es5 --lib es6,dom --esModuleInterop --downlevelIteration",
     "sass": "npx sass --no-source-map"
   },
   "author": "hktysk",
   "license": "MIT",
   "dependencies": {
-    "sass": "^1.23.0"
+    "sass": "^1.23.0",
+    "typescript": "^3.6.4"
   }
 }
