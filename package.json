@@ -13,6 +13,7 @@
   "author": "hktysk",
   "license": "MIT",
   "dependencies": {
+    "@types/node": "^12.11.1",
     "fs": "0.0.1-security",
     "jest": "^24.9.0",
     "node-sass": "^4.12.0",
