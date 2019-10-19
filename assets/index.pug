@@ -1,0 +1,26 @@
+-
+  var devices = [
+    'iPhone-4',
+    'iPhone-5s-5-SE',
+    'XPERIA',
+    'iPhone-8-7-6s-6',
+    'iPhone-8-7-6s-6-Plus',
+    'iPhone-XS-X',
+    'iPhone-XS-Max_XR',
+    'iPad',
+    'ipad-Pro-10_5',
+    'iPad-Pro-11',
+    'iPad-Pro-12_9'
+  ]
+
+<!DOCTYPE html>
+html
+  head
+    meta(charset="utf-8")
+    link(rel="stylesheet", href="css/style.css")
+
+  body
+    each val in devices
+      .item
+        .frame-parent(class='vertical-' + val)
+          iframe.frame(src="https://design-spice.com/2014/03/24/percentag/")
