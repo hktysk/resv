@@ -2,8 +2,25 @@
   when vertical => device: (width, height)
   "_" equal "." or "/" */
 body {
+  background-color: #11afaf;
   padding: 0;
-  background-color: #11afaf; }
+  margin: 0; }
+
+#header {
+  position: relative;
+  width: 100%;
+  height: 8vh;
+  background-color: #327d7d;
+  display: flex;
+  align-items: center;
+  padding: 0 5%;
+  margin-bottom: 2vh; }
+
+#header #logo {
+  position: relative;
+  color: #fff;
+  font-size: 1.5rem;
+  letter-spacing: 0.2vw; }
 
 .item {
   position: relative;
