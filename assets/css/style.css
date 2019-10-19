@@ -23,6 +23,31 @@ body {
   font-size: 1.5rem;
   letter-spacing: 0.2vw; }
 
+#header #tool-bar {
+  position: absolute;
+  right: 0;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 10%;
+  box-sizing: border-box; }
+
+#header #tool-bar #rotate-icon {
+  position: relative;
+  padding: .4vw;
+  border: 2px #fff solid;
+  border-radius: 100%;
+  cursor: pointer;
+  transition: .4s; }
+
+#header #tool-bar #rotate-icon img {
+  width: 1.5vw; }
+
+#header #tool-bar .rotate-horizontal {
+  transform: rotate(45deg); }
+
 .item {
   position: relative;
   width: auto;
