@@ -23,7 +23,37 @@ body {
   font-size: 1.5rem;
   letter-spacing: 0.2vw; }
 
-.item {
+#header #tool-bar {
+  position: absolute;
+  right: 0;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 10%;
+  box-sizing: border-box; }
+
+#header #tool-bar #rotate-icon {
+  position: relative;
+  padding: .4vw;
+  border: 2px #fff solid;
+  border-radius: 100%;
+  cursor: pointer;
+  transition: 0.3s; }
+
+#header #tool-bar #rotate-icon img {
+  width: 1.5vw; }
+
+#header #tool-bar .rotate-horizontal {
+  transform: rotate(90deg); }
+
+#wrap {
+  position: relative;
+  width: auto;
+  height: auto; }
+
+#wrap .item {
   position: relative;
   width: auto;
   height: auto;
@@ -33,7 +63,7 @@ body {
   border-radius: 5% / 3%;
   float: left; }
 
-.item .frame-header {
+#wrap .item .frame-header {
   position: relative;
   width: 100%;
   height: auto;
@@ -44,139 +74,262 @@ body {
   display: flex;
   align-items: center; }
 
-.item .frame-header .size {
+#wrap .item .frame-header .size {
   position: absolute;
   right: .4vw;
   font-size: .7rem;
   background-color: #198e8e;
   padding: .2vw; }
 
-.item .frame-parent {
+#wrap .item .frame-header .horizontal {
+  display: none; }
+
+#wrap .item .frame-parent {
   position: relative;
-  background-color: gray;
+  background-color: #327d7d;
   display: flex;
   justify-content: center;
   align-items: center;
   overflow: hidden;
-  margin: 5px; }
+  margin: 5px;
+  transition: 0.3s; }
 
-.item .vertical-iPhone-4 {
+#wrap .item .iPhone-4 {
   width: calc(320px / 2);
-  height: calc(480px / 2); }
+  height: calc(480px / 2);
+  transition: 0.3s; }
 
-.item .vertical-iPhone-4 .frame {
+#wrap .item .iPhone-4 .frame {
   position: absolute;
   width: 320px;
   height: 480px;
   border: none;
-  transform: scale(0.5); }
+  transform: scale(0.5);
+  transition: 0.3s; }
 
-.item .vertical-iPhone-5s-5-SE {
+#wrap .item .iPhone-5s-5-SE {
   width: calc(320px / 2);
-  height: calc(568px / 2); }
+  height: calc(568px / 2);
+  transition: 0.3s; }
 
-.item .vertical-iPhone-5s-5-SE .frame {
+#wrap .item .iPhone-5s-5-SE .frame {
   position: absolute;
   width: 320px;
   height: 568px;
   border: none;
-  transform: scale(0.5); }
+  transform: scale(0.5);
+  transition: 0.3s; }
 
-.item .vertical-XPERIA {
+#wrap .item .XPERIA {
   width: calc(360px / 2);
-  height: calc(640px / 2); }
+  height: calc(640px / 2);
+  transition: 0.3s; }
 
-.item .vertical-XPERIA .frame {
+#wrap .item .XPERIA .frame {
   position: absolute;
   width: 360px;
   height: 640px;
   border: none;
-  transform: scale(0.5); }
+  transform: scale(0.5);
+  transition: 0.3s; }
 
-.item .vertical-iPhone-8-7-6s-6 {
+#wrap .item .iPhone-8-7-6s-6 {
   width: calc(375px / 2);
-  height: calc(664px / 2); }
+  height: calc(664px / 2);
+  transition: 0.3s; }
 
-.item .vertical-iPhone-8-7-6s-6 .frame {
+#wrap .item .iPhone-8-7-6s-6 .frame {
   position: absolute;
   width: 375px;
   height: 664px;
   border: none;
-  transform: scale(0.5); }
+  transform: scale(0.5);
+  transition: 0.3s; }
 
-.item .vertical-iPhone-8-7-6s-6-Plus {
+#wrap .item .iPhone-8-7-6s-6-Plus {
   width: calc(414px / 2);
-  height: calc(736px / 2); }
+  height: calc(736px / 2);
+  transition: 0.3s; }
 
-.item .vertical-iPhone-8-7-6s-6-Plus .frame {
+#wrap .item .iPhone-8-7-6s-6-Plus .frame {
   position: absolute;
   width: 414px;
   height: 736px;
   border: none;
-  transform: scale(0.5); }
+  transform: scale(0.5);
+  transition: 0.3s; }
 
-.item .vertical-iPhone-XS-X {
+#wrap .item .iPhone-XS-X {
   width: calc(375px / 2);
-  height: calc(812px / 2); }
+  height: calc(812px / 2);
+  transition: 0.3s; }
 
-.item .vertical-iPhone-XS-X .frame {
+#wrap .item .iPhone-XS-X .frame {
   position: absolute;
   width: 375px;
   height: 812px;
   border: none;
-  transform: scale(0.5); }
+  transform: scale(0.5);
+  transition: 0.3s; }
 
-.item .vertical-iPhone-XS-Max_XR {
+#wrap .item .iPhone-XS-Max_XR {
   width: calc(414px / 2);
-  height: calc(896px / 2); }
+  height: calc(896px / 2);
+  transition: 0.3s; }
 
-.item .vertical-iPhone-XS-Max_XR .frame {
+#wrap .item .iPhone-XS-Max_XR .frame {
   position: absolute;
   width: 414px;
   height: 896px;
   border: none;
-  transform: scale(0.5); }
+  transform: scale(0.5);
+  transition: 0.3s; }
 
-.item .vertical-iPad {
+#wrap .item .iPad {
   width: calc(768px / 2);
-  height: calc(1024px / 2); }
+  height: calc(1024px / 2);
+  transition: 0.3s; }
 
-.item .vertical-iPad .frame {
+#wrap .item .iPad .frame {
   position: absolute;
   width: 768px;
   height: 1024px;
   border: none;
-  transform: scale(0.5); }
+  transform: scale(0.5);
+  transition: 0.3s; }
 
-.item .vertical-iPad-Pro-10_5 {
+#wrap .item .iPad-Pro-10_5 {
   width: calc(834px / 2);
-  height: calc(1112px / 2); }
+  height: calc(1112px / 2);
+  transition: 0.3s; }
 
-.item .vertical-iPad-Pro-10_5 .frame {
+#wrap .item .iPad-Pro-10_5 .frame {
   position: absolute;
   width: 834px;
   height: 1112px;
   border: none;
-  transform: scale(0.5); }
+  transform: scale(0.5);
+  transition: 0.3s; }
 
-.item .vertical-iPad-Pro-11 {
+#wrap .item .iPad-Pro-11 {
   width: calc(834px / 2);
-  height: calc(1194px / 2); }
+  height: calc(1194px / 2);
+  transition: 0.3s; }
 
-.item .vertical-iPad-Pro-11 .frame {
+#wrap .item .iPad-Pro-11 .frame {
   position: absolute;
   width: 834px;
   height: 1194px;
   border: none;
-  transform: scale(0.5); }
+  transform: scale(0.5);
+  transition: 0.3s; }
 
-.item .vertical-iPad-Pro-12_9 {
+#wrap .item .iPad-Pro-12_9 {
   width: calc(1024px / 2);
-  height: calc(1366px / 2); }
+  height: calc(1366px / 2);
+  transition: 0.3s; }
 
-.item .vertical-iPad-Pro-12_9 .frame {
+#wrap .item .iPad-Pro-12_9 .frame {
   position: absolute;
   width: 1024px;
   height: 1366px;
   border: none;
-  transform: scale(0.5); }
+  transform: scale(0.5);
+  transition: 0.3s; }
+
+.horizontal .item {
+  border-radius: 2% / 3% !important; }
+
+.horizontal .item .frame-header .vertical {
+  display: none; }
+
+.horizontal .item .frame-header .horizontal {
+  display: block !important; }
+
+.horizontal .item .iPhone-4 {
+  width: calc(480px / 2) !important;
+  height: calc(320px / 2) !important; }
+
+.horizontal .item .iPhone-4 .frame {
+  width: 480px !important;
+  height: 320px !important; }
+
+.horizontal .item .iPhone-5s-5-SE {
+  width: calc(568px / 2) !important;
+  height: calc(320px / 2) !important; }
+
+.horizontal .item .iPhone-5s-5-SE .frame {
+  width: 568px !important;
+  height: 320px !important; }
+
+.horizontal .item .XPERIA {
+  width: calc(640px / 2) !important;
+  height: calc(360px / 2) !important; }
+
+.horizontal .item .XPERIA .frame {
+  width: 640px !important;
+  height: 360px !important; }
+
+.horizontal .item .iPhone-8-7-6s-6 {
+  width: calc(664px / 2) !important;
+  height: calc(375px / 2) !important; }
+
+.horizontal .item .iPhone-8-7-6s-6 .frame {
+  width: 664px !important;
+  height: 375px !important; }
+
+.horizontal .item .iPhone-8-7-6s-6-Plus {
+  width: calc(736px / 2) !important;
+  height: calc(414px / 2) !important; }
+
+.horizontal .item .iPhone-8-7-6s-6-Plus .frame {
+  width: 736px !important;
+  height: 414px !important; }
+
+.horizontal .item .iPhone-XS-X {
+  width: calc(812px / 2) !important;
+  height: calc(375px / 2) !important; }
+
+.horizontal .item .iPhone-XS-X .frame {
+  width: 812px !important;
+  height: 375px !important; }
+
+.horizontal .item .iPhone-XS-Max_XR {
+  width: calc(896px / 2) !important;
+  height: calc(414px / 2) !important; }
+
+.horizontal .item .iPhone-XS-Max_XR .frame {
+  width: 896px !important;
+  height: 414px !important; }
+
+.horizontal .item .iPad {
+  width: calc(1024px / 2) !important;
+  height: calc(768px / 2) !important; }
+
+.horizontal .item .iPad .frame {
+  width: 1024px !important;
+  height: 768px !important; }
+
+.horizontal .item .iPad-Pro-10_5 {
+  width: calc(1112px / 2) !important;
+  height: calc(834px / 2) !important; }
+
+.horizontal .item .iPad-Pro-10_5 .frame {
+  width: 1112px !important;
+  height: 834px !important; }
+
+.horizontal .item .iPad-Pro-11 {
+  width: calc(1194px / 2) !important;
+  height: calc(834px / 2) !important; }
+
+.horizontal .item .iPad-Pro-11 .frame {
+  width: 1194px !important;
+  height: 834px !important; }
+
+.horizontal .item .iPad-Pro-12_9 {
+  width: calc(1366px / 2) !important;
+  height: calc(1024px / 2) !important; }
+
+.horizontal .item .iPad-Pro-12_9 .frame {
+  width: 1366px !important;
+  height: 1024px !important; }

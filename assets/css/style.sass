@@ -8,6 +8,8 @@ body
   padding: 0
   margin: 0
 
+$rotate_transition: .3s
+
 #header
   position: relative
   width: 100%
@@ -25,52 +27,114 @@ body
     font-size: 1.5rem
     letter-spacing: 0.2vw
 
+  #tool-bar
+    position: absolute
+    right: 0
+    width: 50%
+    height: 100%
+    display: flex
+    justify-content: flex-end
+    align-items: center
+    padding-right: 10%
+    box-sizing: border-box
 
-.item
+    #rotate-icon
+      position: relative
+      padding: .4vw
+      border: 2px #fff solid
+      border-radius: 100%
+      cursor: pointer
+      transition: $rotate_transition
+
+      img
+        width: 1.5vw
+
+    .rotate-horizontal
+      transform: rotate(90deg)
+
+#wrap
   position: relative
   width: auto
   height: auto
-  padding: .5vw
-  background-color: #327d7d
-  margin: 5px
-  border-radius: 5% / 3%
-  float: left
 
-  .frame-header
+  .item
     position: relative
-    width: 100%
+    width: auto
     height: auto
-    color: #fff
-    font-size: .8rem
-    padding: .6rem .5vw
-    box-sizing: border-box
-    display: flex
-    align-items: center
-
-    .size
-      position: absolute
-      right: .4vw
-      font-size: .7rem
-      background-color: #198e8e
-      padding: .2vw
-
-  .frame-parent
-    position: relative
-    background-color: gray
-    display: flex
-    justify-content: center
-    align-items: center
-    overflow: hidden
+    padding: .5vw
+    background-color: #327d7d
     margin: 5px
+    border-radius: 5% / 3%
+    float: left
 
-  @each $name, $val in $devices
-    .vertical-#{$name}
-      width: calc(#{nth($val, 1)} / 2)
-      height: calc(#{nth($val, 2)} / 2)
+    .frame-header
+      position: relative
+      width: 100%
+      height: auto
+      color: #fff
+      font-size: .8rem
+      padding: .6rem .5vw
+      box-sizing: border-box
+      display: flex
+      align-items: center
 
-      .frame
+      .size
         position: absolute
-        width: nth($val, 1)
-        height: nth($val, 2)
-        border: none
-        transform: scale(0.5)
+        right: .4vw
+        font-size: .7rem
+        background-color: #198e8e
+        padding: .2vw
+
+      .horizontal
+        display: none
+
+    .frame-parent
+      position: relative
+      background-color: #327d7d
+      display: flex
+      justify-content: center
+      align-items: center
+      overflow: hidden
+      margin: 5px
+      transition: $rotate_transition
+
+    // vertical devices
+    @each $name, $val in $devices
+      .#{$name }
+        width: calc(#{ nth($val, 1)} / 2)
+        height: calc(#{ nth($val, 2)} / 2)
+        transition: $rotate_transition
+
+        .frame
+          position: absolute
+          width: nth($val, 1)
+          height: nth($val, 2)
+          border: none
+          transform: scale(0.5)
+          transition: $rotate_transition
+
+.horizontal
+
+    .item
+      border-radius: 2% / 3% !important
+
+      .frame-header
+
+        .size
+        .vertical
+          display: none
+
+        .horizontal
+          display: block !important
+
+      .frame-parent
+
+      // horizontal devices
+      @each $name, $val in $devices
+        .#{$name }
+          width: calc(#{ nth($val, 2)} / 2) !important
+          height: calc(#{ nth($val, 1)} / 2) !important
+
+          .frame
+            width: nth($val, 2) !important
+            height: nth($val, 1) !important
