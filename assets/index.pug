@@ -25,10 +25,14 @@ html
       #tool-bar
         #rotate-icon
           img(src="img/mobile-icon.png")
-    each val, name in devices
-      .item
-        .frame-header
-          .name #{name}
-          .size #{val[0]}x#{val[1]}
-        .frame-parent(class='vertical-' + name)
-          iframe.frame(src="https://design-spice.com/2014/03/24/percentag/")
+    #wrap
+      each val, name in devices
+        .item
+          .frame-header
+            .name #{ name }
+            .size.vertical #{ val[0]}x#{ val[1]}
+            .size.horizontal #{ val[1]}x#{ val[0]}
+          .frame-parent(class=name)
+            iframe.frame(src="https://design-spice.com/2014/03/24/percentag/")
+
+    script(type="text/javascript", src="js/build/main.js")
