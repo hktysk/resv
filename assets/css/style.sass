@@ -1,7 +1,7 @@
 /*
   when vertical => device: (width, height)
   "_" equal "." or "/"
-$devices: ("iPhone-4": (320px, 480px), "iPhone-5s-5-SE": (320px, 568px), "XPERIA": (360px, 640px), "iPhone-8-7-6s-6": (375px, 664px), "iPhone-8-7-6s-6-Plus": (414px, 736px), "iPhone-XS-X": (375px, 812px), "iPhone-XS-Max_XR": (414px, 896px), "iPad": (768px, 1024px), "ipad-Pro-10_5": (834px, 1112px), "iPad-Pro-11": (834px, 1194px), "iPad-Pro-12_9": (1024px, 1366px))
+$devices: ("iPhone-4": (320px, 480px), "iPhone-5s-5-SE": (320px, 568px), "XPERIA": (360px, 640px), "iPhone-8-7-6s-6": (375px, 664px), "iPhone-8-7-6s-6-Plus": (414px, 736px), "iPhone-XS-X": (375px, 812px), "iPhone-XS-Max_XR": (414px, 896px), "iPad": (768px, 1024px), "iPad-Pro-10_5": (834px, 1112px), "iPad-Pro-11": (834px, 1194px), "iPad-Pro-12_9": (1024px, 1366px))
 
 body
   background-color: #11afaf
@@ -25,6 +25,7 @@ body
     font-size: 1.5rem
     letter-spacing: 0.2vw
 
+
 .item
   position: relative
   width: auto
@@ -32,8 +33,26 @@ body
   padding: .5vw
   background-color: #327d7d
   margin: 5px
-  border-radius: 3%
+  border-radius: 5% / 3%
   float: left
+
+  .frame-header
+    position: relative
+    width: 100%
+    height: auto
+    color: #fff
+    font-size: .8rem
+    padding: .6rem .5vw
+    box-sizing: border-box
+    display: flex
+    align-items: center
+
+    .size
+      position: absolute
+      right: .4vw
+      font-size: .7rem
+      background-color: #198e8e
+      padding: .2vw
 
   .frame-parent
     position: relative

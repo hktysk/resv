@@ -30,8 +30,26 @@ body {
   padding: .5vw;
   background-color: #327d7d;
   margin: 5px;
-  border-radius: 3%;
+  border-radius: 5% / 3%;
   float: left; }
+
+.item .frame-header {
+  position: relative;
+  width: 100%;
+  height: auto;
+  color: #fff;
+  font-size: .8rem;
+  padding: .6rem .5vw;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center; }
+
+.item .frame-header .size {
+  position: absolute;
+  right: .4vw;
+  font-size: .7rem;
+  background-color: #198e8e;
+  padding: .2vw; }
 
 .item .frame-parent {
   position: relative;
@@ -130,11 +148,11 @@ body {
   border: none;
   transform: scale(0.5); }
 
-.item .vertical-ipad-Pro-10_5 {
+.item .vertical-iPad-Pro-10_5 {
   width: calc(834px / 2);
   height: calc(1112px / 2); }
 
-.item .vertical-ipad-Pro-10_5 .frame {
+.item .vertical-iPad-Pro-10_5 .frame {
   position: absolute;
   width: 834px;
   height: 1112px;
