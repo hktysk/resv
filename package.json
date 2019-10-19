@@ -5,10 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "jest --preset ts-jest",
-    "tsc": "npx tsc --target es5 --lib es6,dom --esModuleInterop --downlevelIteration",
     "sass": "npx node-sass --no-source-map assets/css/ --output assets/css/",
     "pug": "npx pug assets/",
-    "build": "npm run sass -- --watch & npm run pug -- --watch & npm run tsc assets/js/src/*.ts -- --outDir assets/js/build/ --watch & npx reload -b -d assets/ -w assets"
+    "build": "npm run sass -- --watch & npm run pug -- --watch & npx webpack --watch & npx reload -b -d assets/ -w assets"
   },
   "author": "hktysk",
   "license": "MIT",
@@ -23,6 +22,7 @@
     "pug-cli": "^1.0.0-alpha6",
     "reload": "^3.0.2",
     "ts-jest": "^24.1.0",
+    "ts-loader": "^6.2.0",
     "typescript": "^3.6.4",
     "webpack": "^4.41.2",
     "webpack-cli": "^3.3.9"
