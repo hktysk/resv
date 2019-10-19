@@ -8,7 +8,7 @@
     "tsc": "npx tsc --target es5 --lib es6,dom --esModuleInterop --downlevelIteration",
     "sass": "npx node-sass --no-source-map assets/css/ --output assets/css/",
     "pug": "npx pug assets/",
-    "build": "npm run sass -- --watch & npm run pug -- --watch & npx reload -b -d assets/ -w assets"
+    "build": "npm run sass -- --watch & npm run pug -- --watch & npm run tsc assets/js/*.ts -- --watch & npx reload -b -d assets/ -w assets"
   },
   "author": "hktysk",
   "license": "MIT",
