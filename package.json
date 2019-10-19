@@ -6,12 +6,16 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "tsc": "npx tsc --target es5 --lib es6,dom --esModuleInterop --downlevelIteration",
-    "sass": "npx sass --no-source-map"
+    "sass": "npx node-sass --no-source-map assets/css/ --output assets/css/",
+    "pug": "npx pug assets/"
   },
   "author": "hktysk",
   "license": "MIT",
   "dependencies": {
-    "sass": "^1.23.0",
+    "node-sass": "^4.12.0",
+    "pug": "^2.0.4",
+    "pug-cli": "^1.0.0-alpha6",
+    "reload": "^3.0.2",
     "typescript": "^3.6.4"
   }
 }

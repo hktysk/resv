@@ -1,0 +1,39 @@
+/*
+  when vertical => device: (width, height)
+  "_" equal "." or "/"
+$devices: ("iPhone-4": (320px, 480px), "iPhone-5s-5-SE": (320px, 568px), "XPERIA": (360px, 640px), "iPhone-8-7-6s-6": (375px, 664px), "iPhone-8-7-6s-6-Plus": (414px, 736px), "iPhone-XS-X": (375px, 812px), "iPhone-XS-Max_XR": (414px, 896px), "iPad": (768px, 1024px), "ipad-Pro-10_5": (834px, 1112px), "iPad-Pro-11": (834px, 1194px), "iPad-Pro-12_9": (1024px, 1366px))
+
+body
+  padding: 0
+  background-color: #11afaf
+
+.item
+  position: relative
+  width: auto
+  height: auto
+  padding: .5vw
+  background-color: #327d7d
+  margin: 5px
+  border-radius: 3%
+  float: left
+
+  .frame-parent
+    position: relative
+    background-color: gray
+    display: flex
+    justify-content: center
+    align-items: center
+    overflow: hidden
+    margin: 5px
+
+  @each $name, $val in $devices
+    .vertical-#{$name}
+      width: calc(#{nth($val, 1)} / 2)
+      height: calc(#{nth($val, 2)} / 2)
+
+      .frame
+        position: absolute
+        width: nth($val, 1)
+        height: nth($val, 2)
+        border: none
+        transform: scale(0.5)
