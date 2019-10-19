@@ -1,17 +1,17 @@
 -
-  var devices = [
-    'iPhone-4',
-    'iPhone-5s-5-SE',
-    'XPERIA',
-    'iPhone-8-7-6s-6',
-    'iPhone-8-7-6s-6-Plus',
-    'iPhone-XS-X',
-    'iPhone-XS-Max_XR',
-    'iPad',
-    'ipad-Pro-10_5',
-    'iPad-Pro-11',
-    'iPad-Pro-12_9'
-  ]
+  var devices = {
+    "iPhone-4": [320, 480],
+    "iPhone-5s-5-SE": [320, 568],
+    "XPERIA": [360, 640],
+    "iPhone-8-7-6s-6": [375, 664],
+    "iPhone-8-7-6s-6-Plus": [414, 736],
+    "iPhone-XS-X": [375, 812],
+    "iPhone-XS-Max_XR": [414, 896],
+    "iPad": [768, 1024],
+    "iPad-Pro-10_5": [834, 1112],
+    "iPad-Pro-11": [834, 1194],
+    "iPad-Pro-12_9": [1024, 1366]
+  }
 
 <!DOCTYPE html>
 html
@@ -22,7 +22,10 @@ html
   body
     header#header
       #logo responsive
-    each val in devices
+    each val, name in devices
       .item
-        .frame-parent(class='vertical-' + val)
+        .frame-header
+          .name #{name}
+          .size #{val[0]}x#{val[1]}
+        .frame-parent(class='vertical-' + name)
           iframe.frame(src="https://design-spice.com/2014/03/24/percentag/")
