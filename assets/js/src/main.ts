@@ -1,4 +1,5 @@
-import * as r from './rotate'
+import { rotate } from './rotate'
+import { switchDeviceMode } from './switch-mode'
 
-r.rotate()
-alert('aiueo')
+rotate()
+switchDeviceMode()

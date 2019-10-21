@@ -94,7 +94,7 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\nexports.__esModule = true;\nvar r = __webpack_require__(/*! ./rotate */ \"./assets/js/src/rotate.ts\");\nr.rotate();\nalert('aiueo');\n\n\n//# sourceURL=webpack:///./assets/js/src/main.ts?");
+eval("\nexports.__esModule = true;\nvar rotate_1 = __webpack_require__(/*! ./rotate */ \"./assets/js/src/rotate.ts\");\nvar switch_mode_1 = __webpack_require__(/*! ./switch-mode */ \"./assets/js/src/switch-mode.ts\");\nrotate_1.rotate();\nswitch_mode_1.switchDeviceMode();\n\n\n//# sourceURL=webpack:///./assets/js/src/main.ts?");
 
 /***/ }),
 
@@ -106,7 +106,19 @@ eval("\nexports.__esModule = true;\nvar r = __webpack_require__(/*! ./rotate */ 
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\nexports.__esModule = true;\nfunction rotate() {\n    var btn = document.getElementById('rotate-icon');\n    var wrap = document.getElementById('wrap');\n    btn.onclick = function () {\n        wrap.classList.toggle('horizontal');\n        btn.classList.toggle('rotate-horizontal');\n    };\n}\nexports.rotate = rotate;\n\n\n//# sourceURL=webpack:///./assets/js/src/rotate.ts?");
+eval("\nexports.__esModule = true;\nfunction rotate() {\n    var btn = document.getElementById('rotate-icon');\n    var wrap = document.getElementById('wrap');\n    btn.onclick = function () {\n        if (btn.classList.contains('rotate-icon-stop'))\n            return;\n        wrap.classList.toggle('horizontal');\n        btn.classList.toggle('rotate-horizontal');\n    };\n}\nexports.rotate = rotate;\n\n\n//# sourceURL=webpack:///./assets/js/src/rotate.ts?");
+
+/***/ }),
+
+/***/ "./assets/js/src/switch-mode.ts":
+/*!**************************************!*\
+  !*** ./assets/js/src/switch-mode.ts ***!
+  \**************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\nexports.__esModule = true;\nfunction switchDeviceMode() {\n    var wrap = document.getElementById('wrap');\n    var rotateIcon = document.getElementById('rotate-icon');\n    var btn = {\n        mobile: document.getElementById('mobile-mode'),\n        pc: document.getElementById('pc-mode')\n    };\n    btn.mobile.onclick = function () {\n        wrap.classList.remove('pc-mode');\n        localStorage.setItem('mode', 'mobile');\n        btn.pc.classList.remove('select');\n        btn.mobile.classList.add('select');\n        rotateIcon.classList.remove('rotate-icon-stop');\n    };\n    btn.pc.onclick = function () {\n        wrap.classList.add('pc-mode');\n        localStorage.setItem('mode', 'pc');\n        btn.mobile.classList.remove('select');\n        btn.pc.classList.add('select');\n        rotateIcon.classList.add('rotate-icon-stop');\n    };\n    // Automatically switch mode of first view\n    var mode = localStorage.getItem('mode');\n    if (!mode) {\n        localStorage.setItem('mode', 'mobile');\n    }\n    else {\n        mode === 'mobile' ?\n            btn.mobile.click()\n            : btn.pc.click();\n    }\n}\nexports.switchDeviceMode = switchDeviceMode;\n\n\n//# sourceURL=webpack:///./assets/js/src/switch-mode.ts?");
 
 /***/ })
 

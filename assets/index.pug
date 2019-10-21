@@ -12,6 +12,23 @@
     "iPad-Pro-11": [834, 1194],
     "iPad-Pro-12_9": [1024, 1366]
   }
+  var pc = [
+    [1024, 768],
+    [1280, 1024],
+    [1366, 768],
+    [1440, 900],
+    [1440, 1080],
+    [1536, 864],
+    [1600, 900],
+    [1920, 1080],
+    [1920, 1200],
+    [1920, 1280],
+    [2048, 1080],
+    [2160, 1440],
+    [2560, 1440],
+    [2736, 1824],
+    [4096, 2160]
+  ]
 
 <!DOCTYPE html>
 html
@@ -23,8 +40,12 @@ html
     header#header
       #logo responsive
       #tool-bar
+        #switch-device-mode
+          #mobile-mode.select mobile
+          #pc-mode PC
         #rotate-icon
           img(src="img/mobile-icon.png")
+
     #wrap
       each val, name in devices
         .item
@@ -33,6 +54,16 @@ html
             .size.vertical #{ val[0]}x#{ val[1]}
             .size.horizontal #{ val[1]}x#{ val[0]}
           .frame-parent(class=name)
-            iframe.frame(src="https://design-spice.com/2014/03/24/percentag/")
+            iframe.frame(src="https://fastcoding.jp/blog/all/webdesign/designswidth-2018/")
+
+      each val, index in pc
+        .item.pc
+          .frame-header
+            .size.vertical #{ val[0]}x#{ val[1]}
+          - var n = index + 1
+          .frame-parent(class='pc-' + n)
+            iframe.frame(src="https://fastcoding.jp/blog/all/webdesign/designswidth-2018/")
+
+
 
     script(type="text/javascript", src="js/build/main.js")
