@@ -46,7 +46,8 @@ body {
 
 #header #tool-bar #switch-device-mode #mobile-mode, #header #tool-bar #switch-device-mode #pc-mode {
   padding: .4rem .7rem;
-  background-color: #198e8e; }
+  background-color: #198e8e;
+  cursor: pointer; }
 
 #header #tool-bar #switch-device-mode .select {
   background-color: #11afaf !important; }
@@ -64,6 +65,9 @@ body {
 
 #header #tool-bar .rotate-horizontal {
   transform: rotate(90deg); }
+
+#header #tool-bar .rotate-icon-stop {
+  opacity: .4; }
 
 #wrap {
   position: relative;
@@ -555,6 +559,9 @@ body {
 
 .horizontal .pc .frame-header .vertical {
   display: block; }
+
+.pc-mode .item {
+  display: none !important; }
 
 .pc-mode .pc {
   display: block !important; }
