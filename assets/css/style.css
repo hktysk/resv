@@ -237,6 +237,205 @@ body {
   transform: scale(0.5);
   transition: 0.3s; }
 
+#wrap .item .pc-1 {
+  width: calc(1024px / 3);
+  height: calc(768px / 3);
+  transition: 0.3s; }
+
+#wrap .item .pc-1 .frame {
+  position: absolute;
+  width: 1024px;
+  height: 768px;
+  border: none;
+  transform: scale(0.333);
+  transition: 0.3s; }
+
+#wrap .item .pc-2 {
+  width: calc(1280px / 3);
+  height: calc(1024px / 3);
+  transition: 0.3s; }
+
+#wrap .item .pc-2 .frame {
+  position: absolute;
+  width: 1280px;
+  height: 1024px;
+  border: none;
+  transform: scale(0.333);
+  transition: 0.3s; }
+
+#wrap .item .pc-3 {
+  width: calc(1366px / 3);
+  height: calc(768px / 3);
+  transition: 0.3s; }
+
+#wrap .item .pc-3 .frame {
+  position: absolute;
+  width: 1366px;
+  height: 768px;
+  border: none;
+  transform: scale(0.333);
+  transition: 0.3s; }
+
+#wrap .item .pc-4 {
+  width: calc(1440px / 3);
+  height: calc(900px / 3);
+  transition: 0.3s; }
+
+#wrap .item .pc-4 .frame {
+  position: absolute;
+  width: 1440px;
+  height: 900px;
+  border: none;
+  transform: scale(0.333);
+  transition: 0.3s; }
+
+#wrap .item .pc-5 {
+  width: calc(1440px / 3);
+  height: calc(1080px / 3);
+  transition: 0.3s; }
+
+#wrap .item .pc-5 .frame {
+  position: absolute;
+  width: 1440px;
+  height: 1080px;
+  border: none;
+  transform: scale(0.333);
+  transition: 0.3s; }
+
+#wrap .item .pc-6 {
+  width: calc(1536px / 3);
+  height: calc(864px / 3);
+  transition: 0.3s; }
+
+#wrap .item .pc-6 .frame {
+  position: absolute;
+  width: 1536px;
+  height: 864px;
+  border: none;
+  transform: scale(0.333);
+  transition: 0.3s; }
+
+#wrap .item .pc-7 {
+  width: calc(1600px / 3);
+  height: calc(900px / 3);
+  transition: 0.3s; }
+
+#wrap .item .pc-7 .frame {
+  position: absolute;
+  width: 1600px;
+  height: 900px;
+  border: none;
+  transform: scale(0.333);
+  transition: 0.3s; }
+
+#wrap .item .pc-8 {
+  width: calc(1920px / 3);
+  height: calc(1080px / 3);
+  transition: 0.3s; }
+
+#wrap .item .pc-8 .frame {
+  position: absolute;
+  width: 1920px;
+  height: 1080px;
+  border: none;
+  transform: scale(0.333);
+  transition: 0.3s; }
+
+#wrap .item .pc-9 {
+  width: calc(1920px / 3);
+  height: calc(1200px / 3);
+  transition: 0.3s; }
+
+#wrap .item .pc-9 .frame {
+  position: absolute;
+  width: 1920px;
+  height: 1200px;
+  border: none;
+  transform: scale(0.333);
+  transition: 0.3s; }
+
+#wrap .item .pc-10 {
+  width: calc(1920px / 3);
+  height: calc(1280px / 3);
+  transition: 0.3s; }
+
+#wrap .item .pc-10 .frame {
+  position: absolute;
+  width: 1920px;
+  height: 1280px;
+  border: none;
+  transform: scale(0.333);
+  transition: 0.3s; }
+
+#wrap .item .pc-11 {
+  width: calc(2048px / 3);
+  height: calc(1080px / 3);
+  transition: 0.3s; }
+
+#wrap .item .pc-11 .frame {
+  position: absolute;
+  width: 2048px;
+  height: 1080px;
+  border: none;
+  transform: scale(0.333);
+  transition: 0.3s; }
+
+#wrap .item .pc-12 {
+  width: calc(2160px / 3);
+  height: calc(1440px / 3);
+  transition: 0.3s; }
+
+#wrap .item .pc-12 .frame {
+  position: absolute;
+  width: 2160px;
+  height: 1440px;
+  border: none;
+  transform: scale(0.333);
+  transition: 0.3s; }
+
+#wrap .item .pc-13 {
+  width: calc(2560px / 3);
+  height: calc(1440px / 3);
+  transition: 0.3s; }
+
+#wrap .item .pc-13 .frame {
+  position: absolute;
+  width: 2560px;
+  height: 1440px;
+  border: none;
+  transform: scale(0.333);
+  transition: 0.3s; }
+
+#wrap .item .pc-14 {
+  width: calc(2736px / 3);
+  height: calc(1824px / 3);
+  transition: 0.3s; }
+
+#wrap .item .pc-14 .frame {
+  position: absolute;
+  width: 2736px;
+  height: 1824px;
+  border: none;
+  transform: scale(0.333);
+  transition: 0.3s; }
+
+#wrap .item .pc-15 {
+  width: calc(4096px / 3);
+  height: calc(2160px / 3);
+  transition: 0.3s; }
+
+#wrap .item .pc-15 .frame {
+  position: absolute;
+  width: 4096px;
+  height: 2160px;
+  border: none;
+  transform: scale(0.333);
+  transition: 0.3s; }
+
+#wrap .pc {
+  border-radius: 0;
+  display: none; }
+
 .horizontal .item {
   border-radius: 2% / 3% !important; }
 
@@ -333,3 +532,12 @@ body {
 .horizontal .item .iPad-Pro-12_9 .frame {
   width: 1366px !important;
   height: 1024px !important; }
+
+.horizontal .pc {
+  border-radius: 0 !important; }
+
+.horizontal .pc .frame-header .vertical {
+  display: block; }
+
+.pc-mode .pc {
+  display: block !important; }

@@ -1,4 +1,3 @@
-import * as r from './rotate'
+import { rotate } from './rotate'
 
-r.rotate()
-alert('aiueo')
+rotate()

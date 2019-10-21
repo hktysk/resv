@@ -94,7 +94,7 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\nexports.__esModule = true;\nvar r = __webpack_require__(/*! ./rotate */ \"./assets/js/src/rotate.ts\");\nr.rotate();\nalert('aiueo');\n\n\n//# sourceURL=webpack:///./assets/js/src/main.ts?");
+eval("\nexports.__esModule = true;\nvar rotate_1 = __webpack_require__(/*! ./rotate */ \"./assets/js/src/rotate.ts\");\nrotate_1.rotate();\n\n\n//# sourceURL=webpack:///./assets/js/src/main.ts?");
 
 /***/ }),
 
