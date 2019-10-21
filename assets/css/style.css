@@ -34,6 +34,23 @@ body {
   padding-right: 10%;
   box-sizing: border-box; }
 
+#header #tool-bar #switch-device-mode {
+  position: relative;
+  width: auto;
+  color: #fff;
+  font-size: .9rem;
+  border-radius: 3% / 15%;
+  display: flex;
+  margin-right: 2rem;
+  overflow: hidden; }
+
+#header #tool-bar #switch-device-mode #mobile-mode, #header #tool-bar #switch-device-mode #pc-mode {
+  padding: .4rem .7rem;
+  background-color: #198e8e; }
+
+#header #tool-bar #switch-device-mode .select {
+  background-color: #11afaf !important; }
+
 #header #tool-bar #rotate-icon {
   position: relative;
   padding: .4vw;
