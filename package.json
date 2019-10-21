@@ -1,5 +1,6 @@
 {
-  "name": "multi-frame",
+  "name": "resv",
+  "bin": "bin/resv",
   "version": "1.0.0",
   "description": "Preview and auto-update websites under development with multiple device widths and heights",
   "main": "index.js",
@@ -14,6 +15,7 @@
   "dependencies": {
     "@types/jest": "^24.0.19",
     "@types/node": "^12.11.1",
+    "child_process": "^1.0.2",
     "fs": "0.0.1-security",
     "jest": "^24.9.0",
     "jest-localstorage-mock": "^2.4.0",
@@ -29,6 +31,8 @@
     "webpack-cli": "^3.3.9"
   },
   "jest": {
-    "setUpFiles": ["jest-localstorage-mock"]
+    "setUpFiles": [
+      "jest-localstorage-mock"
+    ]
   }
 }
