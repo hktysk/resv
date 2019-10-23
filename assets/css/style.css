@@ -95,6 +95,10 @@ body {
   display: flex;
   align-items: center; }
 
+#wrap .item .frame-header #original-size-icon {
+  width: 0.7rem;
+  margin-right: 0.3rem; }
+
 #wrap .item .frame-header .size {
   position: absolute;
   right: .4vw;
@@ -128,12 +132,12 @@ body {
   transform: scale(0.5);
   transition: 0.3s; }
 
-#wrap .item .iPhone-5s-5-SE {
+#wrap .item .iPhone-5-SE {
   width: calc(320px / 2);
   height: calc(568px / 2);
   transition: 0.3s; }
 
-#wrap .item .iPhone-5s-5-SE .frame {
+#wrap .item .iPhone-5-SE .frame {
   position: absolute;
   width: 320px;
   height: 568px;
@@ -474,11 +478,11 @@ body {
   width: 480px !important;
   height: 320px !important; }
 
-.horizontal .item .iPhone-5s-5-SE {
+.horizontal .item .iPhone-5-SE {
   width: calc(568px / 2) !important;
   height: calc(320px / 2) !important; }
 
-.horizontal .item .iPhone-5s-5-SE .frame {
+.horizontal .item .iPhone-5-SE .frame {
   width: 568px !important;
   height: 320px !important; }
 
