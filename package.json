@@ -15,7 +15,6 @@
   "author": "hktysk",
   "license": "MIT",
   "dependencies": {
-    "@types/argv": "0.0.4",
     "@types/jest": "^24.0.19",
     "@types/node": "^12.11.1",
     "child_process": "^1.0.2",
