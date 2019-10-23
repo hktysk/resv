@@ -23,7 +23,8 @@ program.on('--help', () => {
 })
 
 const argv = program.parse(process.argv)
-const main = (): void => {
+
+function main(): void {
   const targets = argv.args
   let target: string = targets.length > 0 ? targets[0] : process.cwd()
 
