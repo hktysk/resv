@@ -1,9 +1,17 @@
 module.exports = {
   mode: "development",
-  entry: "./assets/js/src/main.ts",
+  target: "node",
+  node: {
+    __dirname: false,
+    __filename: false
+  },
+  entry: {
+    "assets/js/build/main.js": "./assets/js/src/main.ts",
+    "lib/index.js" : "./lib/index.ts"
+  },
   output: {
-    path: `${__dirname }/assets/js/build`,
-    filename: "main.js"
+    path: __dirname,
+    filename: "[name]"
   },
   module: {
     rules: [
@@ -14,6 +22,6 @@ module.exports = {
     ]
   },
   resolve: {
-    extensions: [".ts"]
+    extensions: [".js", ".ts"]
   }
 }
