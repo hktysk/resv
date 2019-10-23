@@ -30,6 +30,7 @@ describe('switching between pc and mobile', () => {
   it('when clicked mobile-mode', () => {
     btn.pc.click()
     btn.mobile.click()
+    expect(btn.mobile.classList.contains('select')).toBe(true)
     expect(wrap.classList.contains('pc-mode')).toBe(false)
     expect(localStorage.getItem('mode')).toBe('mobile')
   })
@@ -37,6 +38,7 @@ describe('switching between pc and mobile', () => {
   it('when clicked pc-mode', () => {
     btn.mobile.click()
     btn.pc.click()
+    expect(btn.pc.classList.contains('select')).toBe(true)
     expect(wrap.classList.contains('pc-mode')).toBe(true)
     expect(localStorage.getItem('mode')).toBe('pc')  })
 

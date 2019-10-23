@@ -35,7 +35,7 @@
     "webpack-cli": "^3.3.9"
   },
   "jest": {
-    "setUpFiles": [
+    "setupFiles": [
       "jest-localstorage-mock"
     ]
   }

@@ -22,7 +22,7 @@ export function switchDeviceMode(): void {
       btn.pc.classList.add('select')
       rotateIcon.classList.add('rotate-icon-stop')
     } else {
-      btn.pc.classList.add('select')
+      btn.mobile.classList.add('select')
     }
 
     localStorage.setItem('mode', mode)
