@@ -40,7 +40,7 @@ describe('switching between pc and mobile', () => {
     btn.pc.click()
     expect(btn.pc.classList.contains('select')).toBe(true)
     expect(wrap.classList.contains('pc-mode')).toBe(true)
-    expect(localStorage.getItem('mode')).toBe('pc')  })
-
+    expect(localStorage.getItem('mode')).toBe('pc')
+  })
 })
 
