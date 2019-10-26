@@ -4,7 +4,7 @@
     "resv": "bin/resv"
   },
   "version": "1.0.0",
-  "description": "Preview and auto-update websites under development with multiple device widths and heights",
+  "description": "A tool made of TypeScript that allows you to check the responsive design of each device at a glance",
   "main": "index.js",
   "scripts": {
     "test": "jest --preset ts-jest",

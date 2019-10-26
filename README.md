@@ -1,5 +1,5 @@
 # *resv*
->A tool made of TypeScript that allows you to check the responsive design of each breakpoint at a glance. Start from the command line, monitor files and update automatically.
+>A tool made of TypeScript that allows you to check the responsive design of each device at a glance. Start from the command line, monitor files and update automatically.
 
 [![MIT License](http://img.shields.io/badge/license-MIT-blue.svg?style=flat)](LICENSE)
 
