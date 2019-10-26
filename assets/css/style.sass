@@ -100,9 +100,13 @@ $rotate_transition: .3s
       display: flex
       align-items: center
 
-      #original-size-icon
+      .original-size-icon
         width: 0.7rem
         margin-right: 0.3rem
+        cursor: pointer
+
+        &:hover
+          opacity: .5
 
       .size
         position: absolute
@@ -137,7 +141,6 @@ $rotate_transition: .3s
           height: nth($val, 2)
           border: none
           transform: scale(0.5)
-          transition: $rotate_transition
 
     // vertical pc
     @each $val in $pc
@@ -152,7 +155,24 @@ $rotate_transition: .3s
           height: nth($val, 2)
           border: none
           transform: scale(0.333)
-          transition: $rotate_transition
+
+    // original vertical devices
+    @each $name, $val in $devices
+      .original-size-#{$name }
+        width: nth($val, 1)
+        height: nth($val, 2)
+
+        .frame
+          transform: scale(1)
+
+    // original vertical pc
+    @each $val in $pc
+      .original-size-pc-#{ index($pc, $val)}
+        width: nth($val, 1)
+        height: nth($val, 2)
+
+        .frame
+          transform: scale(1)
 
   .pc
     border-radius: 0
@@ -184,6 +204,14 @@ $rotate_transition: .3s
             width: nth($val, 2) !important
             height: nth($val, 1) !important
 
+      // original horizontal devices
+      @each $name, $val in $devices
+        .original-size-#{$name }
+          width: nth($val, 2) !important
+          height: nth($val, 1) !important
+
+          .frame
+            transform: scale(1)
 
     .pc
       border-radius: 0 !important

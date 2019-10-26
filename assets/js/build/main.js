@@ -86,6 +86,18 @@
 /************************************************************************/
 /******/ ({
 
+/***/ "./assets/js/src/display-original-size.ts":
+/*!************************************************!*\
+  !*** ./assets/js/src/display-original-size.ts ***!
+  \************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\nexports.__esModule = true;\nfunction displayOriginalSize() {\n    var btns = document.getElementsByClassName('original-size-icon');\n    var _loop_1 = function (i) {\n        var btn = btns[i];\n        btn.onclick = function () {\n            var item = btn.parentNode.parentNode;\n            var frameParent = item.getElementsByClassName('frame-parent')[0];\n            var iframe = item.getElementsByClassName('frame')[0];\n            if (frameParent.className.indexOf('original-size') > -1) {\n                frameParent.style.transition = '0s';\n                iframe.style.transition = '0s';\n                frameParent.className = Array.from(frameParent.classList).slice(0, -1).join(' ');\n                setTimeout(function () {\n                    frameParent.style.cssText = null;\n                    iframe.style.cssText = null;\n                }, 100);\n                return;\n            }\n            frameParent.classList.add('original-size-' + frameParent.classList[1]);\n        };\n    };\n    for (var i = 0; i < btns.length; i++) {\n        _loop_1(i);\n    }\n}\nexports.displayOriginalSize = displayOriginalSize;\n\n\n//# sourceURL=webpack:///./assets/js/src/display-original-size.ts?");
+
+/***/ }),
+
 /***/ "./assets/js/src/main.ts":
 /*!*******************************!*\
   !*** ./assets/js/src/main.ts ***!
@@ -94,7 +106,7 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\nexports.__esModule = true;\nvar rotate_1 = __webpack_require__(/*! ./rotate */ \"./assets/js/src/rotate.ts\");\nvar switch_mode_1 = __webpack_require__(/*! ./switch-mode */ \"./assets/js/src/switch-mode.ts\");\nrotate_1.rotate();\nswitch_mode_1.switchDeviceMode();\n\n\n//# sourceURL=webpack:///./assets/js/src/main.ts?");
+eval("\nexports.__esModule = true;\nvar rotate_1 = __webpack_require__(/*! ./rotate */ \"./assets/js/src/rotate.ts\");\nvar switch_mode_1 = __webpack_require__(/*! ./switch-mode */ \"./assets/js/src/switch-mode.ts\");\nvar display_original_size_1 = __webpack_require__(/*! ./display-original-size */ \"./assets/js/src/display-original-size.ts\");\nrotate_1.rotate();\nswitch_mode_1.switchDeviceMode();\ndisplay_original_size_1.displayOriginalSize();\n\n\n//# sourceURL=webpack:///./assets/js/src/main.ts?");
 
 /***/ }),
 

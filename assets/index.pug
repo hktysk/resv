@@ -50,7 +50,7 @@ html
       each val, name in devices
         .item
           .frame-header
-            img#original-size-icon(src="img/original-size-icon.png")
+            img.original-size-icon(src="img/original-size-icon.png")
             .name #{ name }
             .size.vertical #{ val[0]}x#{ val[1]}
             .size.horizontal #{ val[1]}x#{ val[0]}
@@ -60,6 +60,7 @@ html
       each val, index in pc
         .item.pc
           .frame-header
+            img.original-size-icon(src="img/original-size-icon.png")
             .size.vertical #{ val[0]}x#{ val[1]}
           - var n = index + 1
           .frame-parent(class='pc-' + n)
