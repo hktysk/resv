@@ -7,7 +7,7 @@ module.exports = {
   },
   entry: {
     "assets/js/build/main.js": "./assets/js/src/main.ts",
-    "lib/index.js" : "./lib/index.ts"
+    "bin/index.js" : "./bin/index.ts"
   },
   output: {
     path: __dirname,
