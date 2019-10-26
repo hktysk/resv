@@ -110,6 +110,9 @@ body {
       overflow: hidden;
       margin: 5px;
       transition: 0.3s; }
+      #wrap .item .frame-parent .frame {
+        background-color: #fff;
+        border: none; }
     #wrap .item .iPhone-4 {
       width: calc(320px / 2);
       height: calc(480px / 2);
@@ -118,7 +121,6 @@ body {
         position: absolute;
         width: 320px;
         height: 480px;
-        border: none;
         transform: scale(0.5); }
     #wrap .item .iPhone-5-SE {
       width: calc(320px / 2);
@@ -128,7 +130,6 @@ body {
         position: absolute;
         width: 320px;
         height: 568px;
-        border: none;
         transform: scale(0.5); }
     #wrap .item .XPERIA {
       width: calc(360px / 2);
@@ -138,7 +139,6 @@ body {
         position: absolute;
         width: 360px;
         height: 640px;
-        border: none;
         transform: scale(0.5); }
     #wrap .item .iPhone-8-7-6s-6 {
       width: calc(375px / 2);
@@ -148,7 +148,6 @@ body {
         position: absolute;
         width: 375px;
         height: 664px;
-        border: none;
         transform: scale(0.5); }
     #wrap .item .iPhone-8-7-6s-6-Plus {
       width: calc(414px / 2);
@@ -158,7 +157,6 @@ body {
         position: absolute;
         width: 414px;
         height: 736px;
-        border: none;
         transform: scale(0.5); }
     #wrap .item .iPhone-XS-X {
       width: calc(375px / 2);
@@ -168,7 +166,6 @@ body {
         position: absolute;
         width: 375px;
         height: 812px;
-        border: none;
         transform: scale(0.5); }
     #wrap .item .iPhone-XS-Max_XR {
       width: calc(414px / 2);
@@ -178,7 +175,6 @@ body {
         position: absolute;
         width: 414px;
         height: 896px;
-        border: none;
         transform: scale(0.5); }
     #wrap .item .iPad {
       width: calc(768px / 2);
@@ -188,7 +184,6 @@ body {
         position: absolute;
         width: 768px;
         height: 1024px;
-        border: none;
         transform: scale(0.5); }
     #wrap .item .iPad-Pro-10_5 {
       width: calc(834px / 2);
@@ -198,7 +193,6 @@ body {
         position: absolute;
         width: 834px;
         height: 1112px;
-        border: none;
         transform: scale(0.5); }
     #wrap .item .iPad-Pro-11 {
       width: calc(834px / 2);
@@ -208,7 +202,6 @@ body {
         position: absolute;
         width: 834px;
         height: 1194px;
-        border: none;
         transform: scale(0.5); }
     #wrap .item .iPad-Pro-12_9 {
       width: calc(1024px / 2);
@@ -218,7 +211,6 @@ body {
         position: absolute;
         width: 1024px;
         height: 1366px;
-        border: none;
         transform: scale(0.5); }
     #wrap .item .pc-1 {
       width: calc(1024px / 3);
@@ -228,7 +220,6 @@ body {
         position: absolute;
         width: 1024px;
         height: 768px;
-        border: none;
         transform: scale(0.333); }
     #wrap .item .pc-2 {
       width: calc(1280px / 3);
@@ -238,7 +229,6 @@ body {
         position: absolute;
         width: 1280px;
         height: 1024px;
-        border: none;
         transform: scale(0.333); }
     #wrap .item .pc-3 {
       width: calc(1366px / 3);
@@ -248,7 +238,6 @@ body {
         position: absolute;
         width: 1366px;
         height: 768px;
-        border: none;
         transform: scale(0.333); }
     #wrap .item .pc-4 {
       width: calc(1440px / 3);
@@ -258,7 +247,6 @@ body {
         position: absolute;
         width: 1440px;
         height: 900px;
-        border: none;
         transform: scale(0.333); }
     #wrap .item .pc-5 {
       width: calc(1440px / 3);
@@ -268,7 +256,6 @@ body {
         position: absolute;
         width: 1440px;
         height: 1080px;
-        border: none;
         transform: scale(0.333); }
     #wrap .item .pc-6 {
       width: calc(1536px / 3);
@@ -278,7 +265,6 @@ body {
         position: absolute;
         width: 1536px;
         height: 864px;
-        border: none;
         transform: scale(0.333); }
     #wrap .item .pc-7 {
       width: calc(1600px / 3);
@@ -288,7 +274,6 @@ body {
         position: absolute;
         width: 1600px;
         height: 900px;
-        border: none;
         transform: scale(0.333); }
     #wrap .item .pc-8 {
       width: calc(1920px / 3);
@@ -298,7 +283,6 @@ body {
         position: absolute;
         width: 1920px;
         height: 1080px;
-        border: none;
         transform: scale(0.333); }
     #wrap .item .pc-9 {
       width: calc(1920px / 3);
@@ -308,7 +292,6 @@ body {
         position: absolute;
         width: 1920px;
         height: 1200px;
-        border: none;
         transform: scale(0.333); }
     #wrap .item .pc-10 {
       width: calc(1920px / 3);
@@ -318,7 +301,6 @@ body {
         position: absolute;
         width: 1920px;
         height: 1280px;
-        border: none;
         transform: scale(0.333); }
     #wrap .item .pc-11 {
       width: calc(2048px / 3);
@@ -328,7 +310,6 @@ body {
         position: absolute;
         width: 2048px;
         height: 1080px;
-        border: none;
         transform: scale(0.333); }
     #wrap .item .pc-12 {
       width: calc(2160px / 3);
@@ -338,7 +319,6 @@ body {
         position: absolute;
         width: 2160px;
         height: 1440px;
-        border: none;
         transform: scale(0.333); }
     #wrap .item .pc-13 {
       width: calc(2560px / 3);
@@ -348,7 +328,6 @@ body {
         position: absolute;
         width: 2560px;
         height: 1440px;
-        border: none;
         transform: scale(0.333); }
     #wrap .item .pc-14 {
       width: calc(2736px / 3);
@@ -358,7 +337,6 @@ body {
         position: absolute;
         width: 2736px;
         height: 1824px;
-        border: none;
         transform: scale(0.333); }
     #wrap .item .pc-15 {
       width: calc(4096px / 3);
@@ -368,7 +346,6 @@ body {
         position: absolute;
         width: 4096px;
         height: 2160px;
-        border: none;
         transform: scale(0.333); }
     #wrap .item .original-size-iPhone-4 {
       width: 320px;

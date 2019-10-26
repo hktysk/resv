@@ -132,6 +132,10 @@ $rotate_transition: .3s
       margin: 5px
       transition: $rotate_transition
 
+      .frame
+        background-color: #fff
+        border: none
+
     // vertical devices
     @each $name, $val in $devices
       .#{$name }
@@ -143,7 +147,6 @@ $rotate_transition: .3s
           position: absolute
           width: nth($val, 1)
           height: nth($val, 2)
-          border: none
           transform: scale(0.5)
 
     // vertical pc
@@ -157,7 +160,6 @@ $rotate_transition: .3s
           position: absolute
           width: nth($val, 1)
           height: nth($val, 2)
-          border: none
           transform: scale(0.333)
 
     // original vertical devices
