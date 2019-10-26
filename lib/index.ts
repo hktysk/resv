@@ -72,10 +72,9 @@ function main(): void {
     watch directory option.
     If --watch-dir is not specified, watch target directory
   */
+  let watchPath: string = argv.watchDir ? path.join(process.cwd(), argv.watchDir) : target
   options.push('--watch-dir')
-  options.push(
-    argv.watchDir ? path.join(process.cwd(), argv.watchDir) : target
-  )
+  options.push(watchPath)
 
   if (argv.port) {
     const port: string = argv.port
@@ -108,7 +107,7 @@ function main(): void {
   s.stdout.setEncoding('utf8')
   s.stdout.on('data', data => {
     console.log(
-      data.replace(path.join(__dirname, '../assets'), target)
+      data.replace(path.join(__dirname, '../assets'), watchPath)
     )
   })
   s.on('error', () => {
