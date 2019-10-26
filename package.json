@@ -1,10 +1,28 @@
 {
   "name": "resv",
+  "version": "1.0.0",
   "bin": {
     "resv": "bin/resv"
   },
-  "version": "1.0.0",
+  "files": [
+    "assets",
+    "bin"
+  ],
   "description": "A tool made of TypeScript that allows you to check the responsive design of each device at a glance",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com/hktysk/resv.git"
+  },
+  "keywords": [
+    "browser",
+    "design",
+    "development",
+    "mobile",
+    "reload",
+    "responsive",
+    "resv"
+  ],
+  "author": "hktysk",
   "main": "index.js",
   "scripts": {
     "test": "jest --preset ts-jest",
@@ -12,23 +30,24 @@
     "pug": "npx pug assets/",
     "build": "npm run sass -- --watch & npm run pug -- --watch & npx webpack --watch & npx reload -b -d assets/ -w assets"
   },
-  "author": "hktysk",
   "license": "MIT",
   "dependencies": {
-    "@types/jest": "^24.0.19",
-    "@types/node": "^12.11.1",
     "child_process": "^1.0.2",
     "commander": "^3.0.2",
     "fs": "0.0.1-security",
+    "path": "^0.12.7",
+    "reload": "^3.0.2"
+  },
+  "devDependencies": {
+    "@types/jest": "^24.0.20",
+    "@types/node": "^12.11.7",
     "jest": "^24.9.0",
     "jest-localstorage-mock": "^2.4.0",
-    "node-sass": "^4.12.0",
-    "path": "^0.12.7",
+    "node-sass": "^4.13.0",
     "pug": "^2.0.4",
     "pug-cli": "^1.0.0-alpha6",
-    "reload": "^3.0.2",
     "ts-jest": "^24.1.0",
-    "ts-loader": "^6.2.0",
+    "ts-loader": "^6.2.1",
     "typescript": "^3.6.4",
     "webpack": "^4.41.2",
     "webpack-cli": "^3.3.9"
