@@ -48,13 +48,17 @@ body {
         background-color: #11afaf !important; }
     #header #tool-bar #rotate-icon {
       position: relative;
-      padding: .4vw;
+      width: 5.1vh;
+      height: 5.1vh;
       border: 2px #fff solid;
       border-radius: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       cursor: pointer;
       transition: 0.3s; }
       #header #tool-bar #rotate-icon img {
-        width: 1.5vw; }
+        width: 3.2vh; }
     #header #tool-bar .rotate-horizontal {
       transform: rotate(90deg); }
     #header #tool-bar .rotate-icon-stop {
