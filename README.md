@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="https://github.com/hktysk/images/blob/master/resv/screen-shot.jpg?raw=true">
+</p>
+
 # *resv*
 >A tool made of TypeScript that allows you to check the responsive design of each device at a glance. Start from the command line, monitor files and update automatically.
 
