@@ -11,6 +11,10 @@ program
     'The directory to watch. Defaults the serving directory or file'
   )
   .option(
+    '-e, --exts [extensions]',
+    'Extensions separated by commas or pipes. Defaults to html,css,sass,scss,js,jsx,tsx,vue,php,rb,go,py'
+  )
+  .option(
     '-p, --port [port]',
     'The port to bind to. Defaults to 8080 (default: "8080")'
   )
@@ -79,6 +83,30 @@ function main(): void {
 
   options.push('--watch-dir')
   options.push(watchPath)
+
+  let exts: string[] = argv.exts ? argv.exts.split(/(\||,)/) : []
+  const defaultExts: string[] = [
+    'html',
+    'css',
+    'sass',
+    'scss',
+    'js',
+    'jsx',
+    'tsx',
+    'vue',
+    'php',
+    'rb',
+    'go',
+    'py'
+  ]
+
+  exts = Array.from(new Set([
+    ...exts,
+    ...defaultExts
+  ]))
+
+  options.push('--exts')
+  options.push(exts.join(','))
 
   if (argv.port) {
     const port: string = argv.port

@@ -44,5 +44,6 @@ resv -p 80
 |options|description|
 |---|---|
 | -w, ---watch-dir [directory] | The directory to watch. Defaults the serving directory |
+| -e, --exts [extensions] | Extensions separated by commas or pipes. Defaults to html,css,sass,scss,js,jsx,tsx,vue,php,rb,go,py |
 | -p, --port [port] | The port to bind to. Defaults to 8080(default: "8080") |
 | -h, --help | output usage information |
