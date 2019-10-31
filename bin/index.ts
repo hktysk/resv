@@ -72,7 +72,11 @@ function main(): void {
     watch directory option.
     If --watch-dir is not specified, watch target directory
   */
-  let watchPath: string = argv.watchDir ? path.join(process.cwd(), argv.watchDir) : target
+  let watchPath: string = argv.watchDir || target
+  if (watchPath.slice(0, 1) !== '/') {
+    watchPath = path.join(__dirname, watchPath)
+  }
+
   options.push('--watch-dir')
   options.push(watchPath)
 
