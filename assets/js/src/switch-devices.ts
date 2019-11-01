@@ -1,4 +1,4 @@
-export function switchDeviceMode(): void {
+export function switchDevices(): void {
   const wrap: HTMLElement = document.getElementById('wrap')
   const rotateIcon: HTMLElement = document.getElementById('rotate-icon')
   const btn: {
@@ -9,7 +9,7 @@ export function switchDeviceMode(): void {
     pc: document.getElementById('pc-mode')
   }
 
-  function switchMode(mode: 'pc' | 'mobile'): void {
+  function show(mode: 'pc' | 'mobile'): void {
     // init
     wrap.classList.remove('pc-mode')
     btn.mobile.classList.remove('select')
@@ -28,15 +28,13 @@ export function switchDeviceMode(): void {
     localStorage.setItem('mode', mode)
   }
 
-  btn.mobile.onclick = () => switchMode('mobile')
-  btn.pc.onclick = () => switchMode('pc')
+  btn.mobile.onclick = () => show('mobile')
+  btn.pc.onclick = () => show('pc')
 
   // Automatically switch mode of first view
   const mode: string | undefined = localStorage.getItem('mode')
   if (mode) {
-    mode === 'mobile' ?
-      btn.mobile.click()
-      : btn.pc.click()
+    mode === 'mobile' ?  btn.mobile.click() : btn.pc.click()
   } else {
     localStorage.setItem('mode', 'mobile')
   }

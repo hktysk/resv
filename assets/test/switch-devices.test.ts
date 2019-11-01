@@ -1,6 +1,6 @@
 import * as fs from 'fs'
 import * as path from 'path'
-import { switchDeviceMode } from '../js/src/switch-mode'
+import { switchDevices } from '../js/src/switch-devices'
 import 'jest-localstorage-mock'
 
 const html: string = fs.readFileSync(path.resolve(__dirname, '../index.html')).toString()
@@ -21,7 +21,7 @@ describe('switching between pc and mobile', () => {
       pc: document.getElementById('pc-mode')
     }
 
-    switchDeviceMode()
+    switchDevices()
   })
   afterEach(() => {
     jest.resetModules()

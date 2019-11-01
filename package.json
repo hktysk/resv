@@ -1,12 +1,13 @@
 {
   "name": "resv",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "bin": {
     "resv": "bin/resv"
   },
   "files": [
     "assets",
-    "bin"
+    "bin",
+    "lib"
   ],
   "description": "A tool made of TypeScript that allows you to check the responsive design of each device at a glance",
   "repository": {

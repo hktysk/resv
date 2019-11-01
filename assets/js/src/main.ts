@@ -1,7 +1,7 @@
 import { rotate } from './rotate'
-import { switchDeviceMode } from './switch-mode'
+import { switchDevices } from './switch-devices'
 import { displayOriginalSize } from './display-original-size'
 
 rotate()
-switchDeviceMode()
+switchDevices()
 displayOriginalSize()
