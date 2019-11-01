@@ -31,8 +31,12 @@ const argv = program.parse(process.argv)
 function main(): void {
   const targets = argv.args
   let target: string = targets.length > 0 ? targets[0] : process.cwd()
+  const isUrl: boolean = (
+    target.slice(0, 7) === 'http://'
+    || target.slice(0, 8) === 'https://'
+  )
 
-  if (target.slice(0, 7) !== 'http://' && target.slice(0, 8) !== 'https://') {
+  if (isUrl === false) {
     /*
       If it is not a URL,
       check for existence and adjust the path
@@ -77,7 +81,7 @@ function main(): void {
     If --watch-dir is not specified, watch target directory
   */
   let watchPath: string = argv.watchDir || target
-  if (watchPath.slice(0, 1) !== '/') {
+  if (watchPath.slice(0, 1) !== '/' && isUrl === false) {
     watchPath = path.join(__dirname, watchPath)
   }
 
@@ -131,15 +135,28 @@ function main(): void {
     Use the reload module to update the browser.
     more: https://www.npmjs.com/package/reload
   */
-  let s = spawn(
-    path.join(__dirname, '../node_modules/.bin/reload'),
-    ['-b', '-d', path.join(__dirname, '../assets'), ...options]
-  )
+  let reload: string
+  const modulesPath: string = path.join(__dirname, '../node_modules')
+  options = ['-b', '-d', path.join(__dirname, '../assets'), ...options]
+
+  try {
+    fs.statSync(modulesPath)
+    reload = path.join(modulesPath, '.bin/reload')
+  } catch(err) {
+    if (err.code === 'ENOENT') {
+      reload = 'npx'
+      options.unshift('reload')
+    }
+  }
+
+  let s = spawn(reload, options)
 
   s.stdout.setEncoding('utf8')
   s.stdout.on('data', data => {
     console.log(
-      data.replace(path.join(__dirname, '../assets'), watchPath)
+      data
+      .replace('monitoring dir', 'monitoring')
+      .replace(path.join(__dirname, '../assets'), watchPath)
     )
   })
   s.on('error', () => {
