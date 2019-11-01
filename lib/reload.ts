@@ -27,6 +27,7 @@ export default function reload(watchPath: string, options: string[]): void {
   s.stdout.on('data', data => {
     console.log(
       data
+      .replace('Reload web server:', 'resv started!')
       .replace('monitoring dir', 'monitoring')
       .replace(path.join(__dirname, '../assets'), watchPath)
     )
