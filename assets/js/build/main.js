@@ -106,7 +106,7 @@ eval("\nexports.__esModule = true;\nfunction displayOriginalSize() {\n    var bt
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\nexports.__esModule = true;\nvar rotate_1 = __webpack_require__(/*! ./rotate */ \"./assets/js/src/rotate.ts\");\nvar switch_mode_1 = __webpack_require__(/*! ./switch-mode */ \"./assets/js/src/switch-mode.ts\");\nvar display_original_size_1 = __webpack_require__(/*! ./display-original-size */ \"./assets/js/src/display-original-size.ts\");\nrotate_1.rotate();\nswitch_mode_1.switchDeviceMode();\ndisplay_original_size_1.displayOriginalSize();\n\n\n//# sourceURL=webpack:///./assets/js/src/main.ts?");
+eval("\nexports.__esModule = true;\nvar rotate_1 = __webpack_require__(/*! ./rotate */ \"./assets/js/src/rotate.ts\");\nvar switch_devices_1 = __webpack_require__(/*! ./switch-devices */ \"./assets/js/src/switch-devices.ts\");\nvar display_original_size_1 = __webpack_require__(/*! ./display-original-size */ \"./assets/js/src/display-original-size.ts\");\nrotate_1.rotate();\nswitch_devices_1.switchDevices();\ndisplay_original_size_1.displayOriginalSize();\n\n\n//# sourceURL=webpack:///./assets/js/src/main.ts?");
 
 /***/ }),
 
@@ -122,15 +122,15 @@ eval("\nexports.__esModule = true;\nfunction rotate() {\n    var btn = document.
 
 /***/ }),
 
-/***/ "./assets/js/src/switch-mode.ts":
-/*!**************************************!*\
-  !*** ./assets/js/src/switch-mode.ts ***!
-  \**************************************/
+/***/ "./assets/js/src/switch-devices.ts":
+/*!*****************************************!*\
+  !*** ./assets/js/src/switch-devices.ts ***!
+  \*****************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\nexports.__esModule = true;\nfunction switchDeviceMode() {\n    var wrap = document.getElementById('wrap');\n    var rotateIcon = document.getElementById('rotate-icon');\n    var btn = {\n        mobile: document.getElementById('mobile-mode'),\n        pc: document.getElementById('pc-mode')\n    };\n    function switchMode(mode) {\n        // init\n        wrap.classList.remove('pc-mode');\n        btn.mobile.classList.remove('select');\n        btn.pc.classList.remove('select');\n        rotateIcon.classList.remove('rotate-icon-stop');\n        // set\n        if (mode === 'pc') {\n            wrap.classList.add('pc-mode');\n            btn.pc.classList.add('select');\n            rotateIcon.classList.add('rotate-icon-stop');\n        }\n        else {\n            btn.mobile.classList.add('select');\n        }\n        localStorage.setItem('mode', mode);\n    }\n    btn.mobile.onclick = function () { return switchMode('mobile'); };\n    btn.pc.onclick = function () { return switchMode('pc'); };\n    // Automatically switch mode of first view\n    var mode = localStorage.getItem('mode');\n    if (mode) {\n        mode === 'mobile' ?\n            btn.mobile.click()\n            : btn.pc.click();\n    }\n    else {\n        localStorage.setItem('mode', 'mobile');\n    }\n}\nexports.switchDeviceMode = switchDeviceMode;\n\n\n//# sourceURL=webpack:///./assets/js/src/switch-mode.ts?");
+eval("\nexports.__esModule = true;\nfunction switchDevices() {\n    var wrap = document.getElementById('wrap');\n    var rotateIcon = document.getElementById('rotate-icon');\n    var btn = {\n        mobile: document.getElementById('mobile-mode'),\n        pc: document.getElementById('pc-mode')\n    };\n    function show(mode) {\n        // init\n        wrap.classList.remove('pc-mode');\n        btn.mobile.classList.remove('select');\n        btn.pc.classList.remove('select');\n        rotateIcon.classList.remove('rotate-icon-stop');\n        // set\n        if (mode === 'pc') {\n            wrap.classList.add('pc-mode');\n            btn.pc.classList.add('select');\n            rotateIcon.classList.add('rotate-icon-stop');\n        }\n        else {\n            btn.mobile.classList.add('select');\n        }\n        localStorage.setItem('mode', mode);\n    }\n    btn.mobile.onclick = function () { return show('mobile'); };\n    btn.pc.onclick = function () { return show('pc'); };\n    // Automatically switch mode of first view\n    var mode = localStorage.getItem('mode');\n    if (mode) {\n        mode === 'mobile' ? btn.mobile.click() : btn.pc.click();\n    }\n    else {\n        localStorage.setItem('mode', 'mobile');\n    }\n}\nexports.switchDevices = switchDevices;\n\n\n//# sourceURL=webpack:///./assets/js/src/switch-devices.ts?");
 
 /***/ })
 
