@@ -1,0 +1,621 @@
+/*
+  when vertical => device: (width, height)
+  "_" equal "." or "/" */
+body {
+  background-color: #11afaf;
+  padding: 0;
+  margin: 0; }
+
+#header {
+  position: relative;
+  width: 100%;
+  height: 8vh;
+  background-color: #327d7d;
+  display: flex;
+  align-items: center;
+  padding: 0 5%;
+  box-sizing: border-box;
+  margin-bottom: 2vh; }
+  #header #logo {
+    position: relative;
+    color: #fff;
+    font-size: 1.5rem;
+    letter-spacing: 0.2vw; }
+  #header #tool-bar {
+    position: absolute;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 10%;
+    box-sizing: border-box; }
+    #header #tool-bar #switch-device-mode {
+      position: relative;
+      width: auto;
+      color: #fff;
+      font-size: .9rem;
+      border-radius: 3% / 15%;
+      display: flex;
+      margin-right: 2rem;
+      overflow: hidden; }
+      #header #tool-bar #switch-device-mode #mobile-mode, #header #tool-bar #switch-device-mode #pc-mode {
+        padding: .4rem .7rem;
+        background-color: #198e8e;
+        cursor: pointer; }
+      #header #tool-bar #switch-device-mode .select {
+        background-color: #11afaf !important; }
+    #header #tool-bar #rotate-icon {
+      position: relative;
+      width: 5.1vh;
+      height: 5.1vh;
+      border: 2px #fff solid;
+      border-radius: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      transition: 0.3s; }
+      #header #tool-bar #rotate-icon img {
+        width: 3.2vh; }
+    #header #tool-bar .rotate-horizontal {
+      transform: rotate(90deg); }
+    #header #tool-bar .rotate-icon-stop {
+      opacity: .4; }
+
+#wrap {
+  position: relative;
+  width: auto;
+  height: auto; }
+  #wrap .item {
+    position: relative;
+    width: auto;
+    height: auto;
+    padding: .5vw;
+    background-color: #327d7d;
+    margin: 5px;
+    border-radius: 5% / 3%;
+    float: left; }
+    #wrap .item .frame-header {
+      position: relative;
+      width: 100%;
+      height: auto;
+      color: #fff;
+      font-size: .8rem;
+      padding: .6rem .5vw;
+      box-sizing: border-box;
+      display: flex;
+      align-items: center; }
+      #wrap .item .frame-header .original-size-icon {
+        width: 0.7rem;
+        margin-right: 0.3rem;
+        cursor: pointer; }
+        #wrap .item .frame-header .original-size-icon:hover {
+          opacity: .5; }
+      #wrap .item .frame-header .size {
+        position: absolute;
+        right: .4vw;
+        font-size: .7rem;
+        background-color: #198e8e;
+        padding: .2vw; }
+      #wrap .item .frame-header .horizontal {
+        display: none; }
+    #wrap .item .frame-parent {
+      position: relative;
+      background-color: #327d7d;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      margin: 5px;
+      transition: 0.3s; }
+      #wrap .item .frame-parent .frame {
+        background-color: #fff;
+        border: none; }
+    #wrap .item .iPhone-4 {
+      width: calc(320px / 2);
+      height: calc(480px / 2);
+      transition: 0.3s; }
+      #wrap .item .iPhone-4 .frame {
+        position: absolute;
+        width: 320px;
+        height: 480px;
+        transform: scale(0.5); }
+    #wrap .item .iPhone-5-SE {
+      width: calc(320px / 2);
+      height: calc(568px / 2);
+      transition: 0.3s; }
+      #wrap .item .iPhone-5-SE .frame {
+        position: absolute;
+        width: 320px;
+        height: 568px;
+        transform: scale(0.5); }
+    #wrap .item .XPERIA {
+      width: calc(360px / 2);
+      height: calc(640px / 2);
+      transition: 0.3s; }
+      #wrap .item .XPERIA .frame {
+        position: absolute;
+        width: 360px;
+        height: 640px;
+        transform: scale(0.5); }
+    #wrap .item .iPhone-8-7-6s-6 {
+      width: calc(375px / 2);
+      height: calc(664px / 2);
+      transition: 0.3s; }
+      #wrap .item .iPhone-8-7-6s-6 .frame {
+        position: absolute;
+        width: 375px;
+        height: 664px;
+        transform: scale(0.5); }
+    #wrap .item .iPhone-8-7-6s-6-Plus {
+      width: calc(414px / 2);
+      height: calc(736px / 2);
+      transition: 0.3s; }
+      #wrap .item .iPhone-8-7-6s-6-Plus .frame {
+        position: absolute;
+        width: 414px;
+        height: 736px;
+        transform: scale(0.5); }
+    #wrap .item .iPhone-XS-X {
+      width: calc(375px / 2);
+      height: calc(812px / 2);
+      transition: 0.3s; }
+      #wrap .item .iPhone-XS-X .frame {
+        position: absolute;
+        width: 375px;
+        height: 812px;
+        transform: scale(0.5); }
+    #wrap .item .iPhone-XS-Max_XR {
+      width: calc(414px / 2);
+      height: calc(896px / 2);
+      transition: 0.3s; }
+      #wrap .item .iPhone-XS-Max_XR .frame {
+        position: absolute;
+        width: 414px;
+        height: 896px;
+        transform: scale(0.5); }
+    #wrap .item .iPad {
+      width: calc(768px / 2);
+      height: calc(1024px / 2);
+      transition: 0.3s; }
+      #wrap .item .iPad .frame {
+        position: absolute;
+        width: 768px;
+        height: 1024px;
+        transform: scale(0.5); }
+    #wrap .item .iPad-Pro-10_5 {
+      width: calc(834px / 2);
+      height: calc(1112px / 2);
+      transition: 0.3s; }
+      #wrap .item .iPad-Pro-10_5 .frame {
+        position: absolute;
+        width: 834px;
+        height: 1112px;
+        transform: scale(0.5); }
+    #wrap .item .iPad-Pro-11 {
+      width: calc(834px / 2);
+      height: calc(1194px / 2);
+      transition: 0.3s; }
+      #wrap .item .iPad-Pro-11 .frame {
+        position: absolute;
+        width: 834px;
+        height: 1194px;
+        transform: scale(0.5); }
+    #wrap .item .iPad-Pro-12_9 {
+      width: calc(1024px / 2);
+      height: calc(1366px / 2);
+      transition: 0.3s; }
+      #wrap .item .iPad-Pro-12_9 .frame {
+        position: absolute;
+        width: 1024px;
+        height: 1366px;
+        transform: scale(0.5); }
+    #wrap .item .pc-1 {
+      width: calc(1024px / 3);
+      height: calc(768px / 3);
+      transition: 0.3s; }
+      #wrap .item .pc-1 .frame {
+        position: absolute;
+        width: 1024px;
+        height: 768px;
+        transform: scale(0.333); }
+    #wrap .item .pc-2 {
+      width: calc(1280px / 3);
+      height: calc(1024px / 3);
+      transition: 0.3s; }
+      #wrap .item .pc-2 .frame {
+        position: absolute;
+        width: 1280px;
+        height: 1024px;
+        transform: scale(0.333); }
+    #wrap .item .pc-3 {
+      width: calc(1366px / 3);
+      height: calc(768px / 3);
+      transition: 0.3s; }
+      #wrap .item .pc-3 .frame {
+        position: absolute;
+        width: 1366px;
+        height: 768px;
+        transform: scale(0.333); }
+    #wrap .item .pc-4 {
+      width: calc(1440px / 3);
+      height: calc(900px / 3);
+      transition: 0.3s; }
+      #wrap .item .pc-4 .frame {
+        position: absolute;
+        width: 1440px;
+        height: 900px;
+        transform: scale(0.333); }
+    #wrap .item .pc-5 {
+      width: calc(1440px / 3);
+      height: calc(1080px / 3);
+      transition: 0.3s; }
+      #wrap .item .pc-5 .frame {
+        position: absolute;
+        width: 1440px;
+        height: 1080px;
+        transform: scale(0.333); }
+    #wrap .item .pc-6 {
+      width: calc(1536px / 3);
+      height: calc(864px / 3);
+      transition: 0.3s; }
+      #wrap .item .pc-6 .frame {
+        position: absolute;
+        width: 1536px;
+        height: 864px;
+        transform: scale(0.333); }
+    #wrap .item .pc-7 {
+      width: calc(1600px / 3);
+      height: calc(900px / 3);
+      transition: 0.3s; }
+      #wrap .item .pc-7 .frame {
+        position: absolute;
+        width: 1600px;
+        height: 900px;
+        transform: scale(0.333); }
+    #wrap .item .pc-8 {
+      width: calc(1920px / 3);
+      height: calc(1080px / 3);
+      transition: 0.3s; }
+      #wrap .item .pc-8 .frame {
+        position: absolute;
+        width: 1920px;
+        height: 1080px;
+        transform: scale(0.333); }
+    #wrap .item .pc-9 {
+      width: calc(1920px / 3);
+      height: calc(1200px / 3);
+      transition: 0.3s; }
+      #wrap .item .pc-9 .frame {
+        position: absolute;
+        width: 1920px;
+        height: 1200px;
+        transform: scale(0.333); }
+    #wrap .item .pc-10 {
+      width: calc(1920px / 3);
+      height: calc(1280px / 3);
+      transition: 0.3s; }
+      #wrap .item .pc-10 .frame {
+        position: absolute;
+        width: 1920px;
+        height: 1280px;
+        transform: scale(0.333); }
+    #wrap .item .pc-11 {
+      width: calc(2048px / 3);
+      height: calc(1080px / 3);
+      transition: 0.3s; }
+      #wrap .item .pc-11 .frame {
+        position: absolute;
+        width: 2048px;
+        height: 1080px;
+        transform: scale(0.333); }
+    #wrap .item .pc-12 {
+      width: calc(2160px / 3);
+      height: calc(1440px / 3);
+      transition: 0.3s; }
+      #wrap .item .pc-12 .frame {
+        position: absolute;
+        width: 2160px;
+        height: 1440px;
+        transform: scale(0.333); }
+    #wrap .item .pc-13 {
+      width: calc(2560px / 3);
+      height: calc(1440px / 3);
+      transition: 0.3s; }
+      #wrap .item .pc-13 .frame {
+        position: absolute;
+        width: 2560px;
+        height: 1440px;
+        transform: scale(0.333); }
+    #wrap .item .pc-14 {
+      width: calc(2736px / 3);
+      height: calc(1824px / 3);
+      transition: 0.3s; }
+      #wrap .item .pc-14 .frame {
+        position: absolute;
+        width: 2736px;
+        height: 1824px;
+        transform: scale(0.333); }
+    #wrap .item .pc-15 {
+      width: calc(4096px / 3);
+      height: calc(2160px / 3);
+      transition: 0.3s; }
+      #wrap .item .pc-15 .frame {
+        position: absolute;
+        width: 4096px;
+        height: 2160px;
+        transform: scale(0.333); }
+    #wrap .item .original-size-iPhone-4 {
+      width: 320px;
+      height: 480px; }
+      #wrap .item .original-size-iPhone-4 .frame {
+        transform: scale(1); }
+    #wrap .item .original-size-iPhone-5-SE {
+      width: 320px;
+      height: 568px; }
+      #wrap .item .original-size-iPhone-5-SE .frame {
+        transform: scale(1); }
+    #wrap .item .original-size-XPERIA {
+      width: 360px;
+      height: 640px; }
+      #wrap .item .original-size-XPERIA .frame {
+        transform: scale(1); }
+    #wrap .item .original-size-iPhone-8-7-6s-6 {
+      width: 375px;
+      height: 664px; }
+      #wrap .item .original-size-iPhone-8-7-6s-6 .frame {
+        transform: scale(1); }
+    #wrap .item .original-size-iPhone-8-7-6s-6-Plus {
+      width: 414px;
+      height: 736px; }
+      #wrap .item .original-size-iPhone-8-7-6s-6-Plus .frame {
+        transform: scale(1); }
+    #wrap .item .original-size-iPhone-XS-X {
+      width: 375px;
+      height: 812px; }
+      #wrap .item .original-size-iPhone-XS-X .frame {
+        transform: scale(1); }
+    #wrap .item .original-size-iPhone-XS-Max_XR {
+      width: 414px;
+      height: 896px; }
+      #wrap .item .original-size-iPhone-XS-Max_XR .frame {
+        transform: scale(1); }
+    #wrap .item .original-size-iPad {
+      width: 768px;
+      height: 1024px; }
+      #wrap .item .original-size-iPad .frame {
+        transform: scale(1); }
+    #wrap .item .original-size-iPad-Pro-10_5 {
+      width: 834px;
+      height: 1112px; }
+      #wrap .item .original-size-iPad-Pro-10_5 .frame {
+        transform: scale(1); }
+    #wrap .item .original-size-iPad-Pro-11 {
+      width: 834px;
+      height: 1194px; }
+      #wrap .item .original-size-iPad-Pro-11 .frame {
+        transform: scale(1); }
+    #wrap .item .original-size-iPad-Pro-12_9 {
+      width: 1024px;
+      height: 1366px; }
+      #wrap .item .original-size-iPad-Pro-12_9 .frame {
+        transform: scale(1); }
+    #wrap .item .original-size-pc-1 {
+      width: 1024px;
+      height: 768px; }
+      #wrap .item .original-size-pc-1 .frame {
+        transform: scale(1); }
+    #wrap .item .original-size-pc-2 {
+      width: 1280px;
+      height: 1024px; }
+      #wrap .item .original-size-pc-2 .frame {
+        transform: scale(1); }
+    #wrap .item .original-size-pc-3 {
+      width: 1366px;
+      height: 768px; }
+      #wrap .item .original-size-pc-3 .frame {
+        transform: scale(1); }
+    #wrap .item .original-size-pc-4 {
+      width: 1440px;
+      height: 900px; }
+      #wrap .item .original-size-pc-4 .frame {
+        transform: scale(1); }
+    #wrap .item .original-size-pc-5 {
+      width: 1440px;
+      height: 1080px; }
+      #wrap .item .original-size-pc-5 .frame {
+        transform: scale(1); }
+    #wrap .item .original-size-pc-6 {
+      width: 1536px;
+      height: 864px; }
+      #wrap .item .original-size-pc-6 .frame {
+        transform: scale(1); }
+    #wrap .item .original-size-pc-7 {
+      width: 1600px;
+      height: 900px; }
+      #wrap .item .original-size-pc-7 .frame {
+        transform: scale(1); }
+    #wrap .item .original-size-pc-8 {
+      width: 1920px;
+      height: 1080px; }
+      #wrap .item .original-size-pc-8 .frame {
+        transform: scale(1); }
+    #wrap .item .original-size-pc-9 {
+      width: 1920px;
+      height: 1200px; }
+      #wrap .item .original-size-pc-9 .frame {
+        transform: scale(1); }
+    #wrap .item .original-size-pc-10 {
+      width: 1920px;
+      height: 1280px; }
+      #wrap .item .original-size-pc-10 .frame {
+        transform: scale(1); }
+    #wrap .item .original-size-pc-11 {
+      width: 2048px;
+      height: 1080px; }
+      #wrap .item .original-size-pc-11 .frame {
+        transform: scale(1); }
+    #wrap .item .original-size-pc-12 {
+      width: 2160px;
+      height: 1440px; }
+      #wrap .item .original-size-pc-12 .frame {
+        transform: scale(1); }
+    #wrap .item .original-size-pc-13 {
+      width: 2560px;
+      height: 1440px; }
+      #wrap .item .original-size-pc-13 .frame {
+        transform: scale(1); }
+    #wrap .item .original-size-pc-14 {
+      width: 2736px;
+      height: 1824px; }
+      #wrap .item .original-size-pc-14 .frame {
+        transform: scale(1); }
+    #wrap .item .original-size-pc-15 {
+      width: 4096px;
+      height: 2160px; }
+      #wrap .item .original-size-pc-15 .frame {
+        transform: scale(1); }
+  #wrap .pc {
+    border-radius: 0;
+    display: none; }
+
+.horizontal .item {
+  border-radius: 2% / 3% !important; }
+  .horizontal .item .frame-header .vertical {
+    display: none; }
+  .horizontal .item .frame-header .horizontal {
+    display: block !important; }
+  .horizontal .item .iPhone-4 {
+    width: calc(480px / 2) !important;
+    height: calc(320px / 2) !important; }
+    .horizontal .item .iPhone-4 .frame {
+      width: 480px !important;
+      height: 320px !important; }
+  .horizontal .item .iPhone-5-SE {
+    width: calc(568px / 2) !important;
+    height: calc(320px / 2) !important; }
+    .horizontal .item .iPhone-5-SE .frame {
+      width: 568px !important;
+      height: 320px !important; }
+  .horizontal .item .XPERIA {
+    width: calc(640px / 2) !important;
+    height: calc(360px / 2) !important; }
+    .horizontal .item .XPERIA .frame {
+      width: 640px !important;
+      height: 360px !important; }
+  .horizontal .item .iPhone-8-7-6s-6 {
+    width: calc(664px / 2) !important;
+    height: calc(375px / 2) !important; }
+    .horizontal .item .iPhone-8-7-6s-6 .frame {
+      width: 664px !important;
+      height: 375px !important; }
+  .horizontal .item .iPhone-8-7-6s-6-Plus {
+    width: calc(736px / 2) !important;
+    height: calc(414px / 2) !important; }
+    .horizontal .item .iPhone-8-7-6s-6-Plus .frame {
+      width: 736px !important;
+      height: 414px !important; }
+  .horizontal .item .iPhone-XS-X {
+    width: calc(812px / 2) !important;
+    height: calc(375px / 2) !important; }
+    .horizontal .item .iPhone-XS-X .frame {
+      width: 812px !important;
+      height: 375px !important; }
+  .horizontal .item .iPhone-XS-Max_XR {
+    width: calc(896px / 2) !important;
+    height: calc(414px / 2) !important; }
+    .horizontal .item .iPhone-XS-Max_XR .frame {
+      width: 896px !important;
+      height: 414px !important; }
+  .horizontal .item .iPad {
+    width: calc(1024px / 2) !important;
+    height: calc(768px / 2) !important; }
+    .horizontal .item .iPad .frame {
+      width: 1024px !important;
+      height: 768px !important; }
+  .horizontal .item .iPad-Pro-10_5 {
+    width: calc(1112px / 2) !important;
+    height: calc(834px / 2) !important; }
+    .horizontal .item .iPad-Pro-10_5 .frame {
+      width: 1112px !important;
+      height: 834px !important; }
+  .horizontal .item .iPad-Pro-11 {
+    width: calc(1194px / 2) !important;
+    height: calc(834px / 2) !important; }
+    .horizontal .item .iPad-Pro-11 .frame {
+      width: 1194px !important;
+      height: 834px !important; }
+  .horizontal .item .iPad-Pro-12_9 {
+    width: calc(1366px / 2) !important;
+    height: calc(1024px / 2) !important; }
+    .horizontal .item .iPad-Pro-12_9 .frame {
+      width: 1366px !important;
+      height: 1024px !important; }
+  .horizontal .item .original-size-iPhone-4 {
+    width: 480px !important;
+    height: 320px !important; }
+    .horizontal .item .original-size-iPhone-4 .frame {
+      transform: scale(1); }
+  .horizontal .item .original-size-iPhone-5-SE {
+    width: 568px !important;
+    height: 320px !important; }
+    .horizontal .item .original-size-iPhone-5-SE .frame {
+      transform: scale(1); }
+  .horizontal .item .original-size-XPERIA {
+    width: 640px !important;
+    height: 360px !important; }
+    .horizontal .item .original-size-XPERIA .frame {
+      transform: scale(1); }
+  .horizontal .item .original-size-iPhone-8-7-6s-6 {
+    width: 664px !important;
+    height: 375px !important; }
+    .horizontal .item .original-size-iPhone-8-7-6s-6 .frame {
+      transform: scale(1); }
+  .horizontal .item .original-size-iPhone-8-7-6s-6-Plus {
+    width: 736px !important;
+    height: 414px !important; }
+    .horizontal .item .original-size-iPhone-8-7-6s-6-Plus .frame {
+      transform: scale(1); }
+  .horizontal .item .original-size-iPhone-XS-X {
+    width: 812px !important;
+    height: 375px !important; }
+    .horizontal .item .original-size-iPhone-XS-X .frame {
+      transform: scale(1); }
+  .horizontal .item .original-size-iPhone-XS-Max_XR {
+    width: 896px !important;
+    height: 414px !important; }
+    .horizontal .item .original-size-iPhone-XS-Max_XR .frame {
+      transform: scale(1); }
+  .horizontal .item .original-size-iPad {
+    width: 1024px !important;
+    height: 768px !important; }
+    .horizontal .item .original-size-iPad .frame {
+      transform: scale(1); }
+  .horizontal .item .original-size-iPad-Pro-10_5 {
+    width: 1112px !important;
+    height: 834px !important; }
+    .horizontal .item .original-size-iPad-Pro-10_5 .frame {
+      transform: scale(1); }
+  .horizontal .item .original-size-iPad-Pro-11 {
+    width: 1194px !important;
+    height: 834px !important; }
+    .horizontal .item .original-size-iPad-Pro-11 .frame {
+      transform: scale(1); }
+  .horizontal .item .original-size-iPad-Pro-12_9 {
+    width: 1366px !important;
+    height: 1024px !important; }
+    .horizontal .item .original-size-iPad-Pro-12_9 .frame {
+      transform: scale(1); }
+
+.horizontal .pc {
+  border-radius: 0 !important; }
+  .horizontal .pc .frame-header .vertical {
+    display: block; }
+
+.pc-mode .item {
+  display: none !important; }
+
+.pc-mode .pc {
+  display: block !important; }
