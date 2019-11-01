@@ -6,7 +6,8 @@
   },
   "files": [
     "assets",
-    "bin"
+    "bin",
+    "lib"
   ],
   "description": "A tool made of TypeScript that allows you to check the responsive design of each device at a glance",
   "repository": {
