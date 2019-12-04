@@ -29,7 +29,8 @@
     "test": "jest --preset ts-jest",
     "sass": "npx node-sass --no-source-map assets/css/ --output assets/css/",
     "pug": "npx pug assets/",
-    "build": "npm run sass -- --watch & npm run pug -- --watch & npx webpack --watch & npx reload -b -d assets/ -w assets"
+    "start": "npm run sass -- --watch & npm run pug -- --watch & npx webpack --watch & npx reload -b -d assets/ -w assets",
+    "build": "npm run sass && npm run pug && npx webpack"
   },
   "license": "MIT",
   "dependencies": {
