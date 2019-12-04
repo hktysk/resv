@@ -19,9 +19,7 @@ program.on('--help', () => {
   console.log()
 })
 
-const argv = program.parse(process.argv)
-
-function main(): void {
+function main(argv: program.Command): void {
   let target: string = argv.args.length > 0 ? argv.args[0] : process.cwd()
 
   if (target.slice(0, 7) !== 'http://' && target.slice(0, 8) !== 'https://') {
@@ -54,4 +52,4 @@ function main(): void {
 }
 
 
-main()
+main(program.parse(process.argv))

@@ -1,6 +1,6 @@
 {
   "name": "resv",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "bin": {
     "resv": "bin/resv"
   },
@@ -29,7 +29,8 @@
     "test": "jest --preset ts-jest",
     "sass": "npx node-sass --no-source-map assets/css/ --output assets/css/",
     "pug": "npx pug assets/",
-    "build": "npm run sass -- --watch & npm run pug -- --watch & npx webpack --watch & npx reload -b -d assets/ -w assets"
+    "start": "npm run sass -- --watch & npm run pug -- --watch & npx webpack --watch & npx reload -b -d assets/ -w assets",
+    "build": "npm run sass && npm run pug && npx webpack"
   },
   "license": "MIT",
   "dependencies": {
@@ -40,6 +41,7 @@
     "reload": "^3.0.2"
   },
   "devDependencies": {
+    "@types/commander": "^2.12.2",
     "@types/jest": "^24.0.20",
     "@types/node": "^12.11.7",
     "jest": "^24.9.0",
