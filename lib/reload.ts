@@ -12,8 +12,8 @@ export default function reload(watchPath: string, options: string[]): void {
   let opts = ['-b', '-d', path.join(__dirname, '../assets'), ...options]
 
   try {
-    fs.statSync(modulesPath)
     reload = path.join(modulesPath, '.bin/reload')
+    fs.statSync(reload)
   } catch(err) {
     if (err.code === 'ENOENT') {
       reload = 'npx'
