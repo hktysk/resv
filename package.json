@@ -1,6 +1,6 @@
 {
   "name": "resv",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "bin": {
     "resv": "bin/resv"
   },
